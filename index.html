@@ -256,7 +256,8 @@
                               <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                           </div>
                           <div class="col-md-12 form-group">
-                              <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone">
+                            <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone" oninput="validatePhoneNumber(this)">
+                            <span id="phoneNumberError" class="text-danger"></span>
                           </div>
                           <div class="col-md-6 form-group">
                               <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
@@ -281,7 +282,7 @@
                           </div>
 
                           <div class="col-md-12 form-group">
-                              <select class="form-control" id="selectPerson">
+                              <select class="form-control" id="selectPerson" placeholder="Choose number of people">
                                   <option></option>
                                   <option>1</option>
                                   <option>2</option>
@@ -303,7 +304,7 @@
           </div>
           <div class="col-lg-6">
             <h2>Our Location</h2>
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.1455042122943!2d74.4713081742574!3d15.796279946688946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65936f06b5a7%3A0x7a86c4a5f5b5dff9!2sJain%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1693739062840!5m2!1sen!2sin" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.1455042122943!2d74.4713081742574!3d15.796279946688946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65936f06b5a7%3A0x7a86c4a5f5b5dff9!2sJain%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1693739062840!5m2!1sen!2sin" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
           </div>
       </div>      
   </div>
@@ -349,7 +350,7 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <input type="number1" id="phoneNumber1" class="form-control" placeholder="Phone" required="required">
               <p class="help-block text-danger"></p>
             </div>
           </div>
