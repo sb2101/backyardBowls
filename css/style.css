@@ -104,7 +104,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	border-color: rgba(231, 231, 231, 0);
 }
 #menu.navbar-default .navbar-nav > li > a {
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	color: #eee;
 	font-weight: 400;
 	font-size: 15px;
@@ -185,6 +185,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .intro .overlay {
 	background: rgba(0, 0, 0, 0.5);
+	height: 100vh;
 }
 .intro h1 {
 	font-family: 'Rochester', cursive;
@@ -210,10 +211,18 @@ header .intro-text {
 }
 /* Features Section */
 #features {
-	padding: 120px 0;
+	padding: 30px 0;
 }
-#features .features-item {
-	margin: 0 20px;
+.features-item {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.features-item > img {
+	height: 200px;
+	margin-bottom: 20px;
 }
 #features img {
 	margin: 30px auto 20px;
@@ -256,7 +265,7 @@ header .intro-text {
 }
 /* Menu Section */
 #restaurant-menu {
-	padding: 100px 0 60px 0;
+	padding: 40px 0 60px 0;
 }
 #restaurant-menu img {
 	width: 300px;
@@ -325,7 +334,7 @@ header .intro-text {
 }
 /* Contact Section */
 #contact {
-	padding: 100px 0;
+	padding: 15px 0;
 	background: #333;
 }
 #contact .contact-item p {
@@ -443,4 +452,15 @@ color: #999;
 }
 #footer a:hover {
 	color: #eee;
+}
+.min-height-100vh {
+min-height: 100vh;
+}
+@media (max-width: 600px) {
+	.bb-responsive {
+		font-size: 95px !important;
+	}
+}
+.nav-bg {
+	background: #262626 !important;
 }

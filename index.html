@@ -36,7 +36,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <!-- Navigation
     ==========================================-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+<nav id="menu" class="navbar navbar-default navbar-fixed-top nav-bg">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -46,19 +46,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div>
-        <div class="col-xs-12 col-sm-2">
-          <h6><a href="#header" class="page-scroll" style="font-family: 'Rochester', cursive">Backyard Bowls</a></h6>
-        </div>
         <ul class="nav navbar-nav">
-          <li><a href="#features" class="page-scroll">specials</a></li>
-          <li><a href="#about" class="page-scroll">about</a></li>
-          <li><a href="#restaurant-menu" class="page-scroll">menu</a></li>
-          <li><a href="#reservation" class="page-scroll">reservation</a></li>
-          <li><a href="#contact" class="page-scroll">contact</a></li>
+          <li><a href="#header" class="page-scroll"><b><i>Backyard Bowls</i></b></a></li>
+          <li><a href="#features" class="page-scroll">SPECIALS</a></li>
+          <li><a href="#about" class="page-scroll">ABOUT</a></li>
+          <li><a href="#restaurant-menu" class="page-scroll">MENU</a></li>
+          <li><a href="Reservation.html" class="page-scroll">RESERVATION</a></li>
+          <li><a href="#contact" class="page-scroll">CONTACT</a></li>
         </ul>
       </div>
     </div>
-    <!-- /.navbar-collapse --> 
+    <!-- /.navbar-collapse -->
   </div>
 </nav>
 <!-- Header -->
@@ -67,8 +65,8 @@
     <div class="overlay">
       <div class="container">
         <div class="row">
-          <div class="intro-text">
-            <h1>Backyard Bowls</h1>
+          <div class="intro-text"><br><br>
+            <h1 class="bb-responsive">Backyard Bowls</h1>
             <p>Reservations: +91 9876543210</p>
           </div>
         </div>
@@ -77,9 +75,9 @@
   </div>
 </header>
 <!-- Features Section -->
-<div id="features" class="text-center">
+<div class="text-center min-height-100vh">
   <div class="container">
-    <div class="section-title">
+    <div id="features">
       <h2>Our Specials</h2>
     </div>
     <div class="row">
@@ -108,7 +106,7 @@
   </div>
 </div>
 <!-- About Section -->
-<div id="about">
+<div id="about" class="min-height-100vh" >
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-md-6 about-img"> </div>
@@ -124,7 +122,7 @@
   </div>
 </div>
 <!-- Restaurant Menu Section -->
-<div id="restaurant-menu">
+<div id="restaurant-menu" class="min-height-100vh">
   <div class="container">
     <div class="section-title text-center">
       <h2>Menu</h2>
@@ -239,7 +237,7 @@
   </div>
 </div>
 <!-- Reservation section -->
-<section id="reservation" class="bg-fixed bg-white section-padding overlay text-center" style="background-image: url(img/reservation-bg.jpg);">
+<!-- <section id="reservation" class="bg-fixed bg-white section-padding overlay text-center" style="background-image: url(img/reservation-bg.jpg);">
   <div class="container">
       <div class="row">
           <div class="col-lg-6">
@@ -302,13 +300,9 @@
                   </form>
               </div>
           </div>
-          <div class="col-lg-6">
-            <h2>Our Location</h2>
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.1455042122943!2d74.4713081742574!3d15.796279946688946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65936f06b5a7%3A0x7a86c4a5f5b5dff9!2sJain%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1693739062840!5m2!1sen!2sin" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-          </div>
       </div>      
   </div>
-</section>
+</section> -->
 <!-- End of Reservation Section -->
 <!-- Contact Section -->
 <div id="contact" class="text-center">
@@ -336,32 +330,44 @@
     </div>
   </div>
   <div class="container">
-    <div class="section-title text-center">
-      <h3>Send us a message</h3>
-    </div>
-    <div class="col-md-8 col-md-offset-2">
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
+    <div class="d-flex">
+      <div class="col-md-6">
+        <div class="section-title text-center">
+          <h3>Send us a message</h3>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="number1" id="phoneNumber1" class="form-control" placeholder="Phone" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
             <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
               <p class="help-block text-danger"></p>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="number1" id="phoneNumber1" class="form-control" placeholder="Phone" required="required">
-              <p class="help-block text-danger"></p>
+            <div id="success"></div>
+            <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+            <div class="section-title text-center">
+              <div>
+              <h3 class="w-100">Our Location</h3>
+              </div>
+              <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.6617085844728!2d74.51029827753996!3d15.874367605398408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf61466bb939a3%3A0x96c421d707844c2c!2sThe%20backyard%20bistro%20grill.!5e0!3m2!1sen!2sin!4v1694343831655!5m2!1sen!2sin" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
             </div>
           </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-      </form>
     </div>
   </div>
 </div>
